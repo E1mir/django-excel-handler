@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% block meta %}
+  {% endblock %}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <title>{{ title|default:self._TemplateReference__context.name }}</title>
+  {% block header %}
+  {% endblock %}
+</head>
+<body>
+{% block body %}
+{% endblock %}
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block scripts %}
+{% endblock %}
+</body>
+</html>
